@@ -1,0 +1,105 @@
+{
+	// 组件自动导入
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			// uni-ui 规则如下配置
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+			"^u-(.*)": "@/components/u-$1/index.vue"
+		}
+	},
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "#50c28b"
+				// "app-plus": {
+				//   "titleNView": false
+				// }
+			}
+		},
+		{
+			"path": "pages/classify/index",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
+			"path": "pages/shoppingCart/index",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/my/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/goshop/index",
+			"style": {
+				"navigationBarTitleText": "商品详情"
+			}
+		},
+		{
+			"path": "pages/ReferralDetails/index",
+			"style": {
+				"navigationBarTitleText": "推荐详情"
+			}
+		},
+		{
+			"path": "pages/SetUp/index",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"color": "#818181",
+		"selectedColor": "#2ebc9e",
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/home/index",
+				"iconPath": "static/icon/tabs/home_default.png",
+				"selectedIconPath": "static/icon/tabs/home_selected.png"
+			},
+			{
+				"text": "分类",
+				"pagePath": "pages/classify/index",
+				"iconPath": "static/icon/tabs/category_default.png",
+				"selectedIconPath": "static/icon/tabs/category_selected.png"
+			},
+			{
+				"text": "购物车",
+				"pagePath": "pages/shoppingCart/index",
+				"iconPath": "static/icon/tabs/cart_default.png",
+				"selectedIconPath": "static/icon/tabs/cart_selected.png"
+			},
+			{
+				"text": "我的",
+				"pagePath": "pages/my/index",
+				"iconPath": "static/icon/tabs/user_default.png",
+				"selectedIconPath": "static/icon/tabs/user_selected.png"
+			}
+		]
+	}
+}
