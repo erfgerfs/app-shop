@@ -1,5 +1,8 @@
 <template>
-  <div class="my" style="width: 100vw; height: 100vh;overflow: auto;">
+  <div
+    class="my"
+    style="width: 100vw; height: 100vh; overflow: auto; position: relative"
+  >
     <div v-show="store.token.length == 0">
       <div class="box">
         <div
@@ -8,6 +11,7 @@
             align-items: center;
             margin-left: 20px;
             margin-bottom: 90px;
+            position: relative;
           "
         >
           <img
@@ -29,6 +33,59 @@
           >
         </div>
       </div>
+      <div
+        style="
+          width: 80%;
+          margin-left: 24px;
+          padding: 20px;
+          position: absolute;
+          top: 110px;
+          left: 0;
+          background-color: #fff;
+          border-radius: 20rpx;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+          "
+        >
+          <h2>我的订单</h2>
+          <p>查看全部订单></p>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+          "
+          class="box3"
+        >
+          <img
+            style="width: 60px; height: 60px"
+            src="../../static/icon/my/1.png"
+            alt=""
+          />
+          <img
+            style="width: 60px; height: 60px"
+            src="../../static/icon/my/2.png"
+            alt=""
+          />
+          <img
+            style="width: 60px; height: 60px"
+            src="../../static/icon/my/3.png"
+            alt=""
+          />
+          <img
+            style="width: 60px; height: 60px"
+            src="../../static/icon/my/4.png"
+            alt=""
+          />
+        </div>
+      </div>
       <u-love></u-love>
     </div>
     <div v-show="store.token.length != 0">
@@ -39,6 +96,7 @@
             align-items: center;
             margin-left: 20px;
             margin-bottom: 90px;
+            position: relative;
           "
           @click="xiugai"
         >
@@ -59,6 +117,7 @@
                 color: #fff;
                 background-color: #00c19d;
               "
+              @click="moi"
             >
               更改头像昵称
             </button>
@@ -73,16 +132,76 @@
           >
         </div>
       </div>
+      <div
+        style="
+          width: 80%;
+          margin-left: 24px;
+          padding: 20px;
+          position: absolute;
+          top: 110px;
+          left: 0;
+          background-color: #fff;
+          border-radius: 20rpx;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+          "
+        >
+          <h2>我的订单</h2>
+          <p>查看全部订单></p>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+          "
+          class="box3"
+        >
+          <img
+            style="width: 60px; height: 60px"
+            src="../../static/icon/my/1.png"
+            alt=""
+          />
+          <img
+            style="width: 60px; height: 60px"
+            src="../../static/icon/my/2.png"
+            alt=""
+          />
+          <img
+            style="width: 60px; height: 60px"
+            src="../../static/icon/my/3.png"
+            alt=""
+          />
+          <img
+            style="width: 60px; height: 60px"
+            src="../../static/icon/my/4.png"
+            alt=""
+          />
+        </div>
+      </div>
       <u-love></u-love>
     </div>
-
   </div>
 </template>
 
 <script lang="ts" setup>
 import { useUserStore } from "@/stores/user";
-const store = useUserStore();
+import { onLoad } from "@dcloudio/uni-app";
 
+const moi=()=>{
+  uni.navigateTo({ url: '/pages/moi/index' })
+}
+
+let store = useUserStore();
+onLoad(() => {
+  store = useUserStore();
+});
 const add = () => {
   uni.navigateTo({
     url: "/pages/SetUp/index",
@@ -108,5 +227,11 @@ const go = () => {
   justify-content: space-between;
   align-items: center;
   color: #fff;
+}
+.box3 {
+  img {
+    width: 60px;
+    height: 60px;
+  }
 }
 </style>

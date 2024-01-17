@@ -4,14 +4,14 @@
       v-show="store.token.length != 0"
       title="我的收货地址"
       clickable
-      @click="onClick"
+      @click="onClick1"
       link
       style="margin-bottom: 20px; margin-top: 20px"
     ></uni-list-item>
     <uni-list-item
       title="关于小兔鲜儿"
       clickable
-      @click="onClick"
+      @click="onClick2"
       link
       style="margin-bottom: 20px"
     ></uni-list-item>
@@ -28,6 +28,12 @@
 <script lang="ts" setup>
 import { useUserStore } from "@/stores/user";
 const store = useUserStore();
+
+const onClick1 = () => {
+  uni.navigateTo({
+    url: "/pages/address/index",
+  });
+};
 
 const quit = () => {
   uni.clearStorageSync();

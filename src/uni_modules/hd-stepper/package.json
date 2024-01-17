@@ -1,0 +1,87 @@
+{
+  "id": "hd-stepper",
+  "displayName": "hd-stepper 步进器（请使用hbx导入或下载后使用hbx更新）",
+  "version": "0.0.4",
+  "description": "一个基于Vue3和TypeScript开发的uni-app步进器组件，由增加按钮、减少按钮和输入框组成，用于在一定范围内输入、调整数字",
+  "keywords": [
+    "fant-mini-plus",
+    "vue3",
+    "步进器",
+    "stepper",
+    "number-box"
+],
+  "repository": "https://gitee.com/fant-mini/uniapp-vue3-fant-ts",
+  "engines": {
+    "HBuilderX": "^3.7.11"
+  },
+  "dcloudext": {
+    "type": "component-vue",
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      },
+      "sourcecode": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": ""
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": "https://github.com/Moonofweisheng/uniapp-vue3-fant-ts"
+  },
+  "uni_modules": {
+    "dependencies": [
+      "hd-utils"
+    ],
+    "encrypt": [],
+    "platforms": {
+      "cloud": {
+        "tcb": "y",
+        "aliyun": "y"
+      },
+      "client": {
+        "Vue": {
+          "vue2": "n",
+          "vue3": "y"
+        },
+        "App": {
+          "app-vue": "y",
+          "app-nvue": "u"
+        },
+        "H5-mobile": {
+          "Safari": "y",
+          "Android Browser": "y",
+          "微信浏览器(Android)": "y",
+          "QQ浏览器(Android)": "y"
+        },
+        "H5-pc": {
+          "Chrome": "y",
+          "IE": "y",
+          "Edge": "y",
+          "Firefox": "y",
+          "Safari": "y"
+        },
+        "小程序": {
+          "微信": "y",
+          "阿里": "y",
+          "百度": "u",
+          "字节跳动": "u",
+          "QQ": "y",
+          "钉钉": "y",
+          "快手": "u",
+          "飞书": "u",
+          "京东": "u"
+        },
+        "快应用": {
+          "华为": "u",
+          "联盟": "u"
+        }
+      }
+    }
+  }
+}

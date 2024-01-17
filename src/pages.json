@@ -62,6 +62,30 @@
 			"style": {
 				"navigationBarTitleText": "登录"
 			}
+		},
+		{
+			"path": "pages/address/index",
+			"style": {
+				"navigationBarTitleText": "收货地址"
+			}
+		},
+		{
+			"path": "pages/newly/index",
+			"style": {
+				"navigationBarTitleText": "新建地址"
+			}
+		},
+		{
+			"path": "pages/moi/index",
+			"style": {
+				"navigationBarTitleText": "个人信息修改"
+			}
+		},
+		{
+			"path": "pages/updata/index",
+			"style": {
+				"navigationBarTitleText": "修改地址"
+			}
 		}
 	],
 	"globalStyle": {
@@ -99,6 +123,16 @@
 				"pagePath": "pages/my/index",
 				"iconPath": "static/icon/tabs/user_default.png",
 				"selectedIconPath": "static/icon/tabs/user_selected.png"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
 			}
 		]
 	}

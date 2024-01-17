@@ -1,7 +1,7 @@
 import { useUserStore } from "@/stores/user";
 import type { dataType } from "./types/responseDataType";
 // 接口的公共地址
-const baseURL = "https://pcapi-xiaotuxian-front.itheima.net";
+const baseURL = "https://pcapi-xiaotuxian-front-devtest.itheima.net";
 
 // 定义拦截器
 const httpInterceptor = {
